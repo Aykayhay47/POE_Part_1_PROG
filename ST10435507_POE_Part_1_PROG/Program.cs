@@ -48,6 +48,7 @@ class CyberSecurityBot
 
     static void DisplayAsciiArt()
     {
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine(@"
 
   ___   _   __  ___  ______  _____                      _ _         
@@ -59,6 +60,7 @@ class CyberSecurityBot
                                                                __/ |
                                                               |___/ 
   ");
+        Console.ResetColor();
     }
 
     static void FormatConsole()
