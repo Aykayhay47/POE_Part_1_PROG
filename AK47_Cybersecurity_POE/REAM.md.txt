@@ -1,0 +1,138 @@
+💡 How to Use the Chatbot
+1. 🧑‍💻 Starting the Application
+Open the .exe or run the application in Visual Studio.
+
+You'll be greeted with:
+Please enter your name to begin...
+
+🔹 What to do:
+Type your name in the chat input field and press Enter.
+
+2. 🤖 Bot Welcomes You
+After you type your name, the bot says:
+
+Welcome, [Your Name]!
+
+AK47: Hello [Your Name], I'm your cybersecurity bot.
+
+3. 🧭 Main Menu / Questions
+The bot shows a menu with numbered questions like:
+
+vbnet
+Copy
+Edit
+• 1. How are you?
+• 2. What's your purpose?
+• 3. What can I ask you about?
+• 4. What is phishing?
+• 5. How do I create a strong password?
+• 6. Is public Wi-Fi safe?
+• 7. What is two-factor authentication?
+• 8. How can I spot a scam email?
+🔹 What to do:
+Type a number (1–8) or a question like “What is phishing?”
+
+The bot will respond with cybersecurity advice.
+
+📝 Using the Task Assistant
+You can manage simple reminders/tasks.
+
+➕ To Add a Task:
+Fill in:
+
+Task Title
+
+Description
+
+(Optional) Reminder in Days (e.g., type 2 to be reminded in 2 days)
+
+Click Add Task
+
+➖ To Remove a Task:
+Select a task from the list
+
+Click Remove Task
+
+🕰️ Reminders:
+Every minute, the bot checks for upcoming tasks and shows reminders like:
+
+⏰ Reminder: Task 'Submit Report' is due today!
+
+🧠 Taking the Quiz
+🟩 How to Start:
+Click the “Start Quiz” button.
+
+📋 Quiz Format:
+The bot asks a multiple-choice question.
+
+You choose the answer by clicking a button.
+
+✅ What happens next:
+It tells you whether you were Correct ✅ or Incorrect ❌
+
+After a short delay, the next question appears.
+
+🎯 End of Quiz:
+You’ll see a summary:
+
+Correct answers ✅
+
+Incorrect ❌
+
+Total score 🏁
+
+You can then click Restart Quiz to try again.
+
+📜 Other Features
+🧾 View Activity Log:
+Type:
+"show activity log"
+
+The bot will show your recent actions like questions asked or tasks added.
+
+📖 Show Menu Again:
+Type:
+"show menu" or click the “Show Menu” button
+
+🧹 Clear Chat:
+Click “Clear Chat” to wipe the chat window clean.
+
+🎧 Audio Greeting (Optional)
+If a file named greeting.wav is placed in the same folder as the .exe, the app will play a welcome sound when the user enters their name.
+
+🎨 Design & User Interface
+Dark theme (background: dark gray/black)
+
+Font: Consolas, white text
+
+Sections:
+
+Top: Chat Output
+
+Middle: Chat Input + Buttons (Send, Clear, Show Menu)
+
+Bottom Left: Task Assistant
+
+Bottom Right: Cybersecurity Quiz
+
+⚙️ Built With
+C#
+
+WPF (XAML)
+
+NAudio for audio playback
+
+Uses DispatcherTimer, Task, and async features
+
+👤 Example Use
+text
+Copy
+Edit
+You: Aashiq
+AK47: Hello Aashiq, I'm your cybersecurity bot.
+AK47: Choose a question by number:
+• 1. How are you?
+...
+
+You: 4
+AK47: Phishing is tricking you into giving personal info through fake messages.

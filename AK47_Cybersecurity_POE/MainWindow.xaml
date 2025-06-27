@@ -1,0 +1,65 @@
+﻿<Window x:Class="AK47_CyberSecurity_POE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AK47 Cybersecurity Bot" Height="720" Width="950"
+        Background="Black" Foreground="White" FontFamily="Consolas">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Chat Output -->
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" Margin="0 0 0 10">
+            <TextBox Name="ChatOutput" Background="black" Foreground="Green" FontSize="14"
+                     IsReadOnly="True" TextWrapping="Wrap" BorderThickness="0"
+                     VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        </ScrollViewer>
+
+        <!-- Chat Input and Buttons -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 0 0 10">
+            <TextBox Name="ChatInput" Width="500" Height="30" FontSize="14" Margin="0 0 10 0"/>
+            <Button Content="Send" Width="80" Height="30" Click="Send_Click" Margin="0 0 10 0" Background="Green" Foreground="White"/>
+            <Button Content="Clear Chat" Width="100" Height="30" Click="ClearChat_Click" Margin="0 0 10 0" Background="Green" Foreground="White"/>
+            <Button Content="Show Menu" Width="100" Height="30" Click="ShowMenu_Click" Background="Green" Foreground="White"/>
+        </StackPanel>
+
+        <!-- Bottom Panels -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Task Panel -->
+            <GroupBox Header="📝 Task Assistant" FontWeight="Bold" Grid.Column="0" Margin="0 0 10 0">
+                <StackPanel Margin="10">
+                    <TextBox Name="TaskTitleInput" Text="Task Title" Margin="0 0 0 5"/>
+                    <TextBox Name="TaskDescriptionInput" Text="Description" Margin="0 0 0 5"/>
+                    <TextBox Name="ReminderDaysInput" Text="Reminder in Days (Optional)" Margin="0 0 0 10"/>
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Button Name="AddTaskButton" Content="Add Task" Width="100" Click="AddTask_Click" Margin="0 0 10 0" Background="Green" Foreground="White"/>
+                        <Button Name="RemoveTaskButton" Content="Remove Task" Width="120" Click="RemoveTask_Click" Background="Green" Foreground="White"/>
+                    </StackPanel>
+                    <ListBox Name="TaskListBox" Height="160" Background="black" Foreground="White"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Quiz Panel -->
+            <GroupBox Header="🧠 Cybersecurity Quiz" FontWeight="Bold" Grid.Column="1">
+                <StackPanel Margin="10">
+                    <Button Name="RestartQuizButton" Content="Start Quiz" Click="RestartQuizButton_Click" Height="30" Margin="0 0 0 10" Background="Green" Foreground="White"/>
+                    <StackPanel Name="QuizPanel" Visibility="Collapsed">
+                        <TextBlock Name="QuizQuestionText" TextWrapping="Wrap" FontWeight="Bold" FontSize="14" Margin="0 0 0 10"/>
+
+                        <StackPanel Name="AnswerPanel" Margin="0 0 0 10"/>
+                        <TextBlock Name="QuizFeedback" TextWrapping="Wrap" FontStyle="Italic" Foreground="LightGreen"
+                                   Margin="0 10 0 0" Visibility="Collapsed" Padding="6" Background="#333333"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>
